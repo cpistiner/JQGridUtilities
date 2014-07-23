@@ -1,4 +1,6 @@
 JQGridUtilies
 =============
 
-Small components to JQGrid for MVC
+pequeños componentes para [JQGrid for MVC].
+
+[JQGrid for MVC]:http://trirand.net/
