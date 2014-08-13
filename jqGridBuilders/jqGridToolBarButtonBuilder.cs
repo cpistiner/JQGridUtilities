@@ -9,7 +9,7 @@ namespace Web.ViewModels.JQGridBuilders
 		{
 			var button = new JQGridToolBarButton();
 			button.ButtonIcon = "ui-icon-pencil";
-			button.ToolTip = "Modificar fila seleccionada (Ctrl+M)";
+			button.ToolTip = "Modificar fila seleccionada";
 			button.Text = " ";
 			button.Position = ToolBarButtonPosition.First;
 			button.OnClick = "modificarFila";
@@ -21,7 +21,7 @@ namespace Web.ViewModels.JQGridBuilders
 		{
 			var button = new JQGridToolBarButton();
 			button.ButtonIcon = "ui-icon-plus";
-			button.ToolTip = "Agregar nueva fila (Ctrl+N)";
+			button.ToolTip = "Agregar nueva fila";
 			button.Text = " ";
 			button.Position = ToolBarButtonPosition.First;
 			button.OnClick = "agregarFila";
