@@ -1,4 +1,4 @@
-JQGridUtilies
+JQGridUtilities
 =============
 
 Small components to [JQGrid for MVC].
