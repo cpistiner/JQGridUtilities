@@ -1,6 +1,6 @@
 ﻿using Trirand.Web.Mvc;
 
-namespace Web.ViewModels.JQGridBuilders
+namespace JQGridUtilities.JQGridBuilders
 {
 	public class JQGridEditFieldAttributeBuilder
 	{
