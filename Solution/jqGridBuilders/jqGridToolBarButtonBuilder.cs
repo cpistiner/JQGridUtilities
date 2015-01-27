@@ -9,10 +9,10 @@ namespace JQGridUtilities.JQGridBuilders
 		{
 			var button = new JQGridToolBarButton();
 			button.ButtonIcon = "ui-icon-pencil";
-			button.ToolTip = "Modificar fila seleccionada";
+			button.ToolTip = "Edit selected row";
 			button.Text = " ";
 			button.Position = ToolBarButtonPosition.First;
-			button.OnClick = "modificarFila";
+			button.OnClick = "onEditRow";
 
 			return button;
 		}
@@ -21,10 +21,10 @@ namespace JQGridUtilities.JQGridBuilders
 		{
 			var button = new JQGridToolBarButton();
 			button.ButtonIcon = "ui-icon-plus";
-			button.ToolTip = "Agregar nueva fila";
+			button.ToolTip = "New row";
 			button.Text = " ";
 			button.Position = ToolBarButtonPosition.First;
-			button.OnClick = "agregarFila";
+			button.OnClick = "onAddRow";
 
 			return button;
 		}
@@ -33,10 +33,10 @@ namespace JQGridUtilities.JQGridBuilders
 		{
 			var button = new JQGridToolBarButton();
 			button.ButtonIcon = "ui-icon-document";
-			button.ToolTip = "Ver fila";
+			button.ToolTip = "View row";
 			button.Text = " ";
 			button.Position = ToolBarButtonPosition.First;
-			button.OnClick = "verFila";
+			button.OnClick = "onViewRow";
 
 			return button;
 		}
@@ -45,10 +45,10 @@ namespace JQGridUtilities.JQGridBuilders
 		{
 			var button = new JQGridToolBarButton();
 			button.ButtonIcon = "ui-icon-grip-dotted-vertical";
-			button.ToolTip = "Mostrar/ocultar columnas";
+			button.ToolTip = "Show/hide columns";
 			button.Text = " ";
 			button.Position = ToolBarButtonPosition.Last;
-			button.OnClick = "seleccionarColumnas";
+			button.OnClick = "onShowHideColumns";
 
 			return button;
 		}
