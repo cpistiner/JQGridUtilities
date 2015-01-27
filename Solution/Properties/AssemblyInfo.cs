@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Solution")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("JQGridUtilities")]
+[assembly: AssemblyDescription("Small components to JQGrid for MVC")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Solution")]
+[assembly: AssemblyCompany("César Pistiner")]
+[assembly: AssemblyProduct("JQGridUtilities")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
