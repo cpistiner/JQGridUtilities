@@ -5,7 +5,7 @@ namespace JQGridUtilities.JQGridBuilders
 {
 	public class JQGridToolBarButtonBuilder
 	{
-		internal static JQGridToolBarButton NonDefaultEdit()
+		public static JQGridToolBarButton NonDefaultEdit()
 		{
 			var button = new JQGridToolBarButton();
 			button.ButtonIcon = "ui-icon-pencil";
@@ -17,7 +17,7 @@ namespace JQGridUtilities.JQGridBuilders
 			return button;
 		}
 
-		internal static JQGridToolBarButton NonDefaultAdd()
+		public static JQGridToolBarButton NonDefaultAdd()
 		{
 			var button = new JQGridToolBarButton();
 			button.ButtonIcon = "ui-icon-plus";
@@ -28,8 +28,8 @@ namespace JQGridUtilities.JQGridBuilders
 
 			return button;
 		}
-		
-		internal static JQGridToolBarButton NonDefaultViewRow()
+
+		public static JQGridToolBarButton NonDefaultViewRow()
 		{
 			var button = new JQGridToolBarButton();
 			button.ButtonIcon = "ui-icon-document";
@@ -41,7 +41,7 @@ namespace JQGridUtilities.JQGridBuilders
 			return button;
 		}
 
-		internal static JQGridToolBarButton ColumnChooser()
+		public static JQGridToolBarButton ColumnChooser()
 		{
 			var button = new JQGridToolBarButton();
 			button.ButtonIcon = "ui-icon-grip-dotted-vertical";
