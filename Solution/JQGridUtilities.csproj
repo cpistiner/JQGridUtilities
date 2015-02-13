@@ -43,6 +43,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="jqGridBuilders\jqGridBuildersLanguages.cs" />
     <Compile Include="jqGridBuilders\jqGridColumnBuilder.cs" />
     <Compile Include="jqGridBuilders\jqGridEditFieldAttributeBuilder.cs" />
     <Compile Include="jqGridBuilders\jqGridToolBarButtonBuilder.cs" />

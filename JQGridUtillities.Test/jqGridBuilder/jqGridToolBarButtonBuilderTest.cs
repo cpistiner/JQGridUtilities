@@ -22,5 +22,21 @@ namespace JQGridUtillities.Test.jqGridBuilder
 
 			Assert.AreEqual("Edit selected row", button.ToolTip);
 		}
+
+		[TestMethod]
+		public void NonDefaultEdit_TooltipInEnglishByParameter()
+		{
+			var button = JQGridToolBarButtonBuilder.NonDefaultEdit(jqGridBuildersLanguages.English);
+
+			Assert.AreEqual("Edit selected row", button.ToolTip);
+		}
+
+		[TestMethod]
+		public void NonDefaultEdit_TooltipInSpanishByParameter()
+		{
+			var button = JQGridToolBarButtonBuilder.NonDefaultEdit(jqGridBuildersLanguages.Spanish);
+
+			Assert.AreEqual("Editar la fila seleccionada", button.ToolTip);
+		}
 	}
 }

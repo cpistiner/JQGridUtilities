@@ -5,6 +5,16 @@ namespace JQGridUtilities.JQGridBuilders
 {
 	public class JQGridToolBarButtonBuilder
 	{
+		public static JQGridToolBarButton NonDefaultEdit(jqGridBuildersLanguages language)
+		{
+			var button = NonDefaultEdit();
+
+			if (language == jqGridBuildersLanguages.Spanish)
+				button.ToolTip = "Editar la fila seleccionada";
+
+			return button;
+		}
+
 		public static JQGridToolBarButton NonDefaultEdit()
 		{
 			var button = new JQGridToolBarButton();
