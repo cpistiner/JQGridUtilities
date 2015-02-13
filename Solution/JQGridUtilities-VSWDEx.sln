@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JQGridUtilities", "JQGridUtilities.csproj", "{5BD8270F-37CD-4F2B-8166-61F8FB542FC9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JQGridUtillities.Test", "..\JQGridUtillities.Test\JQGridUtillities.Test.csproj", "{FC0ACEDF-78D7-40FD-95B7-DDD6DFDD4E3F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{5BD8270F-37CD-4F2B-8166-61F8FB542FC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5BD8270F-37CD-4F2B-8166-61F8FB542FC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5BD8270F-37CD-4F2B-8166-61F8FB542FC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC0ACEDF-78D7-40FD-95B7-DDD6DFDD4E3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC0ACEDF-78D7-40FD-95B7-DDD6DFDD4E3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC0ACEDF-78D7-40FD-95B7-DDD6DFDD4E3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC0ACEDF-78D7-40FD-95B7-DDD6DFDD4E3F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -37,7 +37,8 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="Trirand.Web.Mvc">
+    <Reference Include="Trirand.Web.Mvc, Version=4.6.0.0, Culture=neutral, PublicKeyToken=e2819dc449af3295, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\lib\jqSuite\Trirand.Web.Mvc.dll</HintPath>
     </Reference>
   </ItemGroup>
