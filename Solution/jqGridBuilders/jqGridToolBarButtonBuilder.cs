@@ -27,6 +27,16 @@ namespace JQGridUtilities.JQGridBuilders
 			return button;
 		}
 
+		public static JQGridToolBarButton NonDefaultAdd(jqGridBuildersLanguages language)
+		{
+			var button = NonDefaultAdd();
+
+			if (language == jqGridBuildersLanguages.Spanish)
+				button.ToolTip = "Nueva fila";
+
+			return button;
+		}
+
 		public static JQGridToolBarButton NonDefaultAdd()
 		{
 			var button = new JQGridToolBarButton();
@@ -39,14 +49,34 @@ namespace JQGridUtilities.JQGridBuilders
 			return button;
 		}
 
+		public static JQGridToolBarButton NonDefaultViewRow(jqGridBuildersLanguages language)
+		{
+			var button = NonDefaultViewRow();
+
+			if (language == jqGridBuildersLanguages.Spanish)
+				button.ToolTip = "Ver la fila seleccionada";
+
+			return button;
+		}
+
 		public static JQGridToolBarButton NonDefaultViewRow()
 		{
 			var button = new JQGridToolBarButton();
 			button.ButtonIcon = "ui-icon-document";
-			button.ToolTip = "View row";
+			button.ToolTip = "View selected row";
 			button.Text = " ";
 			button.Position = ToolBarButtonPosition.First;
 			button.OnClick = "onViewRow";
+
+			return button;
+		}
+
+		public static JQGridToolBarButton ColumnChooser(jqGridBuildersLanguages language)
+		{
+			var button = ColumnChooser();
+
+			if (language == jqGridBuildersLanguages.Spanish)
+				button.ToolTip = "Mostrar/ocultar columnas";
 
 			return button;
 		}
