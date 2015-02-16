@@ -3,7 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using Trirand.Web.Mvc;
 
-namespace JQGridUtillities.Test.jqGridBuilder
+namespace JQGridUtilities.Test.jqGridBuilder
 {
 	[TestClass]
 	public class jqGridToolBarButtonBuilderTest

@@ -6,7 +6,7 @@
     <ProjectGuid>{FC0ACEDF-78D7-40FD-95B7-DDD6DFDD4E3F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>JQGridUtillities.Test</RootNamespace>
+    <RootNamespace>JQGridUtilities.Test</RootNamespace>
     <AssemblyName>JQGridUtillities.Test</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
