@@ -243,5 +243,15 @@ namespace JQGridUtilities.Test.jqGridBuilder
 
 			Assert.AreEqual(jqGridBuildersLanguages.English, JQGridToolBarButtonBuilder.DefaultLanguage);
 		}
+
+		[TestMethod]
+		public void DefaultLanguageTooltipsUseDefaultLanguageProperty()
+		{
+			JQGridToolBarButtonBuilder.SetDefaultLanguage(jqGridBuildersLanguages.English);
+			Assert.AreEqual("Edit selected row", JQGridToolBarButtonBuilder.NonDefaultEdit().ToolTip);
+
+			JQGridToolBarButtonBuilder.SetDefaultLanguage(jqGridBuildersLanguages.Spanish);
+			Assert.AreEqual("Editar la fila seleccionada", JQGridToolBarButtonBuilder.NonDefaultEdit().ToolTip);
+		}
 	}
 }

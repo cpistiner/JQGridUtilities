@@ -11,8 +11,7 @@ namespace JQGridUtilities.JQGridBuilders
 		{
 			var button = NonDefaultEdit();
 
-			if (language == jqGridBuildersLanguages.Spanish)
-				button.ToolTip = "Editar la fila seleccionada";
+			button.ToolTip = GetNonDefaultEditToolTip(language);
 
 			return button;
 		}
@@ -21,12 +20,38 @@ namespace JQGridUtilities.JQGridBuilders
 		{
 			var button = new JQGridToolBarButton();
 			button.ButtonIcon = "ui-icon-pencil";
-			button.ToolTip = "Edit selected row";
+			button.ToolTip = GetNonDefaultEditToolTip();
 			button.Text = " ";
 			button.Position = ToolBarButtonPosition.First;
 			button.OnClick = "onEditRow";
 
 			return button;
+		}
+
+		private static string GetNonDefaultEditToolTip(jqGridBuildersLanguages language)
+		{
+			switch (language)
+			{
+				case jqGridBuildersLanguages.English:
+					return "Edit selected row";
+				case jqGridBuildersLanguages.Spanish:
+					return "Editar la fila seleccionada";
+				default:
+					return "Edit selected row";
+			}
+		}
+
+		private static string GetNonDefaultEditToolTip()
+		{
+			switch (_defaultLanguage)
+			{
+				case jqGridBuildersLanguages.English:
+					return "Edit selected row";
+				case jqGridBuildersLanguages.Spanish:
+					return "Editar la fila seleccionada";
+				default:
+					return "Edit selected row";
+			}
 		}
 
 		public static JQGridToolBarButton NonDefaultAdd(jqGridBuildersLanguages language)
