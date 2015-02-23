@@ -8,6 +8,12 @@ namespace JQGridUtilities.Test.jqGridBuilder
 	[TestClass]
 	public class jqGridToolBarButtonBuilderTest
 	{
+		[TestInitialize]
+		public void Initialize()
+		{
+			JQGridToolBarButtonBuilder.Initialize();
+		}
+
 		[TestMethod]
 		public void NonDefaultEdit_TooltipInEnglishByDefault()
 		{
@@ -202,6 +208,40 @@ namespace JQGridUtilities.Test.jqGridBuilder
 		public void Print_DefaultOnClickFunction()
 		{
 			Assert.AreEqual("print", JQGridToolBarButtonBuilder.Print().OnClick);
+		}
+
+		[TestMethod]
+		public void OnStartDefaultLanguage_ReturnEnglish()
+		{
+			Assert.AreEqual(jqGridBuildersLanguages.English, JQGridToolBarButtonBuilder.DefaultLanguage);
+		}
+
+		[TestMethod]
+		public void SetDefaultLanguage_ChangeToSpanish()
+		{
+			Assert.AreEqual(jqGridBuildersLanguages.English, JQGridToolBarButtonBuilder.DefaultLanguage);
+
+			JQGridToolBarButtonBuilder.SetDefaultLanguage(jqGridBuildersLanguages.Spanish);
+
+			Assert.AreEqual(jqGridBuildersLanguages.Spanish, JQGridToolBarButtonBuilder.DefaultLanguage);
+		}
+
+		[TestMethod]
+		public void Initialize_SetDefaultLanguageToEnglish()
+		{
+			JQGridToolBarButtonBuilder.SetDefaultLanguage(jqGridBuildersLanguages.Spanish);
+
+			JQGridToolBarButtonBuilder.Initialize();
+
+			Assert.AreEqual(jqGridBuildersLanguages.English, JQGridToolBarButtonBuilder.DefaultLanguage);
+		}
+
+		[TestMethod]
+		public void SetDefaultLanguage_ChangeToEnglish()
+		{
+			JQGridToolBarButtonBuilder.SetDefaultLanguage(jqGridBuildersLanguages.English);
+
+			Assert.AreEqual(jqGridBuildersLanguages.English, JQGridToolBarButtonBuilder.DefaultLanguage);
 		}
 	}
 }

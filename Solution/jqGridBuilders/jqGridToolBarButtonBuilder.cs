@@ -5,6 +5,8 @@ namespace JQGridUtilities.JQGridBuilders
 {
 	public class JQGridToolBarButtonBuilder
 	{
+		private static jqGridBuildersLanguages _defaultLanguage;
+
 		public static JQGridToolBarButton NonDefaultEdit(jqGridBuildersLanguages language)
 		{
 			var button = NonDefaultEdit();
@@ -135,6 +137,21 @@ namespace JQGridUtilities.JQGridBuilders
 				button.ToolTip = "Imprimir la fila seleccionada";
 
 			return button;
+		}
+
+		public static jqGridBuildersLanguages DefaultLanguage 
+		{
+			get { return _defaultLanguage; }
+		}
+
+		public static void SetDefaultLanguage(jqGridBuildersLanguages language)
+		{
+			_defaultLanguage = language;
+		}
+
+		public static void Initialize()
+		{
+			_defaultLanguage = jqGridBuildersLanguages.English;
 		}
 	}
 }
