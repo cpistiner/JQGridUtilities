@@ -92,5 +92,49 @@ namespace JQGridUtilities.JQGridBuilders
 
 			return button;
 		}
+
+		public static JQGridToolBarButton Comments()
+		{
+			var button = new JQGridToolBarButton();
+			button.ToolTip = "Comments";
+			button.ButtonIcon = "ui-icon-comment";
+			button.Text = " ";
+			button.Position = ToolBarButtonPosition.Last;
+			button.OnClick = "comments";
+
+			return button;
+		}
+
+		public static JQGridToolBarButton Comments(jqGridBuildersLanguages language)
+		{
+			var button = Comments();
+
+			if (language == jqGridBuildersLanguages.Spanish)
+				button.ToolTip = "Conversación";
+
+			return button;
+		}
+
+		public static JQGridToolBarButton Print()
+		{
+			var button = new JQGridToolBarButton();
+			button.ToolTip = "Print selected row";
+			button.ButtonIcon = "ui-icon-print";
+			button.Text = " ";
+			button.Position = ToolBarButtonPosition.Last;
+			button.OnClick = "print";
+
+			return button;
+		}
+
+		public static JQGridToolBarButton Print(jqGridBuildersLanguages language)
+		{
+			var button = Print();
+
+			if (language == jqGridBuildersLanguages.Spanish)
+				button.ToolTip = "Imprimir la fila seleccionada";
+
+			return button;
+		}
 	}
 }

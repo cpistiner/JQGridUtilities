@@ -105,5 +105,103 @@ namespace JQGridUtilities.Test.jqGridBuilder
 
 			Assert.AreEqual("Mostrar/ocultar columnas", button.ToolTip);
 		}
+
+		//Comments
+		[TestMethod]
+		public void Comments_TooltipInEnglishByDefault()
+		{
+			JQGridToolBarButton button = JQGridToolBarButtonBuilder.Comments();
+
+			Assert.AreEqual("Comments", button.ToolTip);
+		}
+
+		[TestMethod]
+		public void Comments_TooltipInEnglishByParameter()
+		{
+			JQGridToolBarButton button = JQGridToolBarButtonBuilder.Comments(jqGridBuildersLanguages.English);
+
+			Assert.AreEqual("Comments", button.ToolTip);
+		}
+
+		[TestMethod]
+		public void Comments_TooltipInSpanishByParameter()
+		{
+			JQGridToolBarButton button = JQGridToolBarButtonBuilder.Comments(jqGridBuildersLanguages.Spanish);
+
+			Assert.AreEqual("Conversación", button.ToolTip);
+		}
+
+		[TestMethod]
+		public void Comments_DefaultButtonIcon()
+		{
+			Assert.AreEqual("ui-icon-comment", JQGridToolBarButtonBuilder.Comments().ButtonIcon);
+		}
+
+		[TestMethod]
+		public void Comments_DefaultText()
+		{
+			Assert.AreEqual(" ", JQGridToolBarButtonBuilder.Comments().Text);
+		}
+
+		[TestMethod]
+		public void Comments_DefaultPosition()
+		{
+			Assert.AreEqual(ToolBarButtonPosition.Last, JQGridToolBarButtonBuilder.Comments().Position);
+		}
+
+		[TestMethod]
+		public void Comments_DefaultOnClickFunction()
+		{
+			Assert.AreEqual("comments", JQGridToolBarButtonBuilder.Comments().OnClick);
+		}
+
+		//Print
+		[TestMethod]
+		public void Print_TooltipInEnglishByDefault()
+		{
+			JQGridToolBarButton button = JQGridToolBarButtonBuilder.Print();
+
+			Assert.AreEqual("Print selected row", button.ToolTip);
+		}
+
+		[TestMethod]
+		public void Print_TooltipInEnglishByParameter()
+		{
+			JQGridToolBarButton button = JQGridToolBarButtonBuilder.Print(jqGridBuildersLanguages.English);
+
+			Assert.AreEqual("Print selected row", button.ToolTip);
+		}
+
+		[TestMethod]
+		public void Print_TooltipInSpanishByParameter()
+		{
+			JQGridToolBarButton button = JQGridToolBarButtonBuilder.Print(jqGridBuildersLanguages.Spanish);
+
+			Assert.AreEqual("Imprimir la fila seleccionada", button.ToolTip);
+		}
+
+		[TestMethod]
+		public void Print_DefaultButtonIcon()
+		{
+			Assert.AreEqual("ui-icon-print", JQGridToolBarButtonBuilder.Print().ButtonIcon);
+		}
+
+		[TestMethod]
+		public void Print_DefaultText()
+		{
+			Assert.AreEqual(" ", JQGridToolBarButtonBuilder.Print().Text);
+		}
+
+		[TestMethod]
+		public void Print_DefaultPosition()
+		{
+			Assert.AreEqual(ToolBarButtonPosition.Last, JQGridToolBarButtonBuilder.Print().Position);
+		}
+
+		[TestMethod]
+		public void Print_DefaultOnClickFunction()
+		{
+			Assert.AreEqual("print", JQGridToolBarButtonBuilder.Print().OnClick);
+		}
 	}
 }
