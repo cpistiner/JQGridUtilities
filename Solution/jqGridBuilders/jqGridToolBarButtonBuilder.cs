@@ -7,33 +7,14 @@ namespace JQGridUtilities.JQGridBuilders
 	{
 		private static jqGridBuildersLanguages _defaultLanguage;
 
-		public static JQGridToolBarButton NonDefaultEdit(jqGridBuildersLanguages language)
-		{
-			var button = NonDefaultEdit();
-
-			button.ToolTip = GetNonDefaultEditToolTip(language);
-
-			return button;
-		}
-
 		public static JQGridToolBarButton NonDefaultEdit()
 		{
 			var button = new JQGridToolBarButton();
 			button.ButtonIcon = "ui-icon-pencil";
-			button.ToolTip = GetNonDefaultEditToolTip();
+			button.ToolTip = GetNonDefaultEditToolTipByLanguage(_defaultLanguage);
 			button.Text = " ";
 			button.Position = ToolBarButtonPosition.First;
 			button.OnClick = "onEditRow";
-
-			return button;
-		}
-
-		public static JQGridToolBarButton NonDefaultAdd(jqGridBuildersLanguages language)
-		{
-			var button = NonDefaultAdd();
-
-			if (language == jqGridBuildersLanguages.Spanish)
-				button.ToolTip = "Nueva fila";
 
 			return button;
 		}
@@ -42,20 +23,10 @@ namespace JQGridUtilities.JQGridBuilders
 		{
 			var button = new JQGridToolBarButton();
 			button.ButtonIcon = "ui-icon-plus";
-			button.ToolTip = "New row";
+			button.ToolTip = GetNonDefaultAddToolTipByLanguage(_defaultLanguage);
 			button.Text = " ";
 			button.Position = ToolBarButtonPosition.First;
 			button.OnClick = "onAddRow";
-
-			return button;
-		}
-
-		public static JQGridToolBarButton NonDefaultViewRow(jqGridBuildersLanguages language)
-		{
-			var button = NonDefaultViewRow();
-
-			if (language == jqGridBuildersLanguages.Spanish)
-				button.ToolTip = "Ver la fila seleccionada";
 
 			return button;
 		}
@@ -64,20 +35,10 @@ namespace JQGridUtilities.JQGridBuilders
 		{
 			var button = new JQGridToolBarButton();
 			button.ButtonIcon = "ui-icon-document";
-			button.ToolTip = "View selected row";
+			button.ToolTip = GetNonDefaultViewRowToolTipByLanguage(_defaultLanguage);
 			button.Text = " ";
 			button.Position = ToolBarButtonPosition.First;
 			button.OnClick = "onViewRow";
-
-			return button;
-		}
-
-		public static JQGridToolBarButton ColumnChooser(jqGridBuildersLanguages language)
-		{
-			var button = ColumnChooser();
-
-			if (language == jqGridBuildersLanguages.Spanish)
-				button.ToolTip = "Mostrar/ocultar columnas";
 
 			return button;
 		}
@@ -86,7 +47,7 @@ namespace JQGridUtilities.JQGridBuilders
 		{
 			var button = new JQGridToolBarButton();
 			button.ButtonIcon = "ui-icon-grip-dotted-vertical";
-			button.ToolTip = "Show/hide columns";
+			button.ToolTip = GetColumnChooserToolTipByLanguage(_defaultLanguage);
 			button.Text = " ";
 			button.Position = ToolBarButtonPosition.Last;
 			button.OnClick = "onShowHideColumns";
@@ -97,7 +58,7 @@ namespace JQGridUtilities.JQGridBuilders
 		public static JQGridToolBarButton Comments()
 		{
 			var button = new JQGridToolBarButton();
-			button.ToolTip = "Comments";
+			button.ToolTip = GetCommentsToolTipByLanguage(_defaultLanguage);
 			button.ButtonIcon = "ui-icon-comment";
 			button.Text = " ";
 			button.Position = ToolBarButtonPosition.Last;
@@ -119,7 +80,7 @@ namespace JQGridUtilities.JQGridBuilders
 		public static JQGridToolBarButton Print()
 		{
 			var button = new JQGridToolBarButton();
-			button.ToolTip = "Print selected row";
+			button.ToolTip = GetPrintToolTipByLanguage(_defaultLanguage);
 			button.ButtonIcon = "ui-icon-print";
 			button.Text = " ";
 			button.Position = ToolBarButtonPosition.Last;
@@ -153,16 +114,6 @@ namespace JQGridUtilities.JQGridBuilders
 			_defaultLanguage = jqGridBuildersLanguages.English;
 		}
 
-		private static string GetNonDefaultEditToolTip(jqGridBuildersLanguages language)
-		{
-			return GetNonDefaultEditToolTipByLanguage(language);
-		}
-
-		private static string GetNonDefaultEditToolTip()
-		{
-			return GetNonDefaultEditToolTipByLanguage(_defaultLanguage);
-		}
-
 		private static string GetNonDefaultEditToolTipByLanguage(jqGridBuildersLanguages language)
 		{
 			switch (language)
@@ -173,6 +124,71 @@ namespace JQGridUtilities.JQGridBuilders
 					return "Editar la fila seleccionada";
 				default:
 					return "Edit selected row";
+			}
+		}
+
+		private static string GetNonDefaultAddToolTipByLanguage(jqGridBuildersLanguages language)
+		{
+			switch (language)
+			{
+				case jqGridBuildersLanguages.English:
+					return "New row";
+				case jqGridBuildersLanguages.Spanish:
+					return "Nueva fila";
+				default:
+					return "New row";
+			}
+		}
+
+		private static string GetNonDefaultViewRowToolTipByLanguage(jqGridBuildersLanguages language)
+		{
+			switch (language)
+			{
+				case jqGridBuildersLanguages.English:
+					return "View selected row";
+				case jqGridBuildersLanguages.Spanish:
+					return "Ver la fila seleccionada";
+				default:
+					return "View selected row";
+			}
+		}
+
+		private static string GetColumnChooserToolTipByLanguage(jqGridBuildersLanguages language)
+		{
+			switch (language)
+			{
+				case jqGridBuildersLanguages.English:
+					return "Show/hide columns";
+				case jqGridBuildersLanguages.Spanish:
+					return "Mostrar/ocultar columnas";
+				default:
+					return "Show/hide columns";
+			}
+		}
+
+		private static string GetCommentsToolTipByLanguage(jqGridBuildersLanguages language)
+		{
+			switch (language)
+			{
+				case jqGridBuildersLanguages.English:
+					return "Comments";
+				case jqGridBuildersLanguages.Spanish:
+					return "Conversación";
+				default:
+					return "Comments";
+			}
+		}
+
+		private static string GetPrintToolTipByLanguage(jqGridBuildersLanguages language)
+		{
+			switch (language)
+			{
+				case jqGridBuildersLanguages.English:
+					return "Print selected row";
+				case jqGridBuildersLanguages.Spanish:
+					return "Imprimir la fila seleccionada";
+				default:
+					return "Print selected row";
 			}
 		}
 	}

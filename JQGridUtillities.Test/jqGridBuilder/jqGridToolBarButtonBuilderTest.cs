@@ -23,17 +23,10 @@ namespace JQGridUtilities.Test.jqGridBuilder
 		}
 
 		[TestMethod]
-		public void NonDefaultEdit_TooltipInEnglishByParameter()
+		public void NonDefaultEdit_TooltipInSpanish()
 		{
-			JQGridToolBarButton button = JQGridToolBarButtonBuilder.NonDefaultEdit(jqGridBuildersLanguages.English);
-
-			Assert.AreEqual("Edit selected row", button.ToolTip);
-		}
-
-		[TestMethod]
-		public void NonDefaultEdit_TooltipInSpanishByParameter()
-		{
-			JQGridToolBarButton button = JQGridToolBarButtonBuilder.NonDefaultEdit(jqGridBuildersLanguages.Spanish);
+			JQGridToolBarButtonBuilder.SetDefaultLanguage(jqGridBuildersLanguages.Spanish);
+			JQGridToolBarButton button = JQGridToolBarButtonBuilder.NonDefaultEdit();
 
 			Assert.AreEqual("Editar la fila seleccionada", button.ToolTip);
 		}
@@ -47,17 +40,10 @@ namespace JQGridUtilities.Test.jqGridBuilder
 		}
 
 		[TestMethod]
-		public void NonDefaultAdd_TooltipInEnglishByParameter()
+		public void NonDefaultAdd_TooltipInSpanish()
 		{
-			JQGridToolBarButton button = JQGridToolBarButtonBuilder.NonDefaultAdd(jqGridBuildersLanguages.English);
-
-			Assert.AreEqual("New row", button.ToolTip);
-		}
-
-		[TestMethod]
-		public void NonDefaultAdd_TooltipInSpanishByParameter()
-		{
-			JQGridToolBarButton button = JQGridToolBarButtonBuilder.NonDefaultAdd(jqGridBuildersLanguages.Spanish);
+			JQGridToolBarButtonBuilder.SetDefaultLanguage(jqGridBuildersLanguages.Spanish);
+			JQGridToolBarButton button = JQGridToolBarButtonBuilder.NonDefaultAdd();
 
 			Assert.AreEqual("Nueva fila", button.ToolTip);
 		}
@@ -72,17 +58,10 @@ namespace JQGridUtilities.Test.jqGridBuilder
 		}
 
 		[TestMethod]
-		public void NonDefaultViewRow_TooltipInEnglishByParameter()
+		public void NonDefaultViewRow_TooltipInSpanish()
 		{
-			JQGridToolBarButton button = JQGridToolBarButtonBuilder.NonDefaultViewRow(jqGridBuildersLanguages.English);
-
-			Assert.AreEqual("View selected row", button.ToolTip);
-		}
-
-		[TestMethod]
-		public void NonDefaultViewRow_TooltipInSpanishByParameter()
-		{
-			JQGridToolBarButton button = JQGridToolBarButtonBuilder.NonDefaultViewRow(jqGridBuildersLanguages.Spanish);
+			JQGridToolBarButtonBuilder.SetDefaultLanguage(jqGridBuildersLanguages.Spanish);
+			JQGridToolBarButton button = JQGridToolBarButtonBuilder.NonDefaultViewRow();
 
 			Assert.AreEqual("Ver la fila seleccionada", button.ToolTip);
 		}
@@ -97,17 +76,10 @@ namespace JQGridUtilities.Test.jqGridBuilder
 		}
 
 		[TestMethod]
-		public void ColumnChooser_TooltipInEnglishByParameter()
+		public void ColumnChooser_TooltipInSpanish()
 		{
-			JQGridToolBarButton button = JQGridToolBarButtonBuilder.ColumnChooser(jqGridBuildersLanguages.English);
-
-			Assert.AreEqual("Show/hide columns", button.ToolTip);
-		}
-
-		[TestMethod]
-		public void ColumnChooser_TooltipInSpanishByParameter()
-		{
-			JQGridToolBarButton button = JQGridToolBarButtonBuilder.ColumnChooser(jqGridBuildersLanguages.Spanish);
+			JQGridToolBarButtonBuilder.SetDefaultLanguage(jqGridBuildersLanguages.Spanish);
+			JQGridToolBarButton button = JQGridToolBarButtonBuilder.ColumnChooser();
 
 			Assert.AreEqual("Mostrar/ocultar columnas", button.ToolTip);
 		}
@@ -122,17 +94,10 @@ namespace JQGridUtilities.Test.jqGridBuilder
 		}
 
 		[TestMethod]
-		public void Comments_TooltipInEnglishByParameter()
+		public void Comments_TooltipInSpanish()
 		{
-			JQGridToolBarButton button = JQGridToolBarButtonBuilder.Comments(jqGridBuildersLanguages.English);
-
-			Assert.AreEqual("Comments", button.ToolTip);
-		}
-
-		[TestMethod]
-		public void Comments_TooltipInSpanishByParameter()
-		{
-			JQGridToolBarButton button = JQGridToolBarButtonBuilder.Comments(jqGridBuildersLanguages.Spanish);
+			JQGridToolBarButtonBuilder.SetDefaultLanguage(jqGridBuildersLanguages.Spanish);
+			JQGridToolBarButton button = JQGridToolBarButtonBuilder.Comments();
 
 			Assert.AreEqual("Conversación", button.ToolTip);
 		}
@@ -171,17 +136,10 @@ namespace JQGridUtilities.Test.jqGridBuilder
 		}
 
 		[TestMethod]
-		public void Print_TooltipInEnglishByParameter()
+		public void Print_TooltipInSpanish()
 		{
-			JQGridToolBarButton button = JQGridToolBarButtonBuilder.Print(jqGridBuildersLanguages.English);
-
-			Assert.AreEqual("Print selected row", button.ToolTip);
-		}
-
-		[TestMethod]
-		public void Print_TooltipInSpanishByParameter()
-		{
-			JQGridToolBarButton button = JQGridToolBarButtonBuilder.Print(jqGridBuildersLanguages.Spanish);
+			JQGridToolBarButtonBuilder.SetDefaultLanguage(jqGridBuildersLanguages.Spanish);
+			JQGridToolBarButton button = JQGridToolBarButtonBuilder.Print();
 
 			Assert.AreEqual("Imprimir la fila seleccionada", button.ToolTip);
 		}
@@ -242,16 +200,6 @@ namespace JQGridUtilities.Test.jqGridBuilder
 			JQGridToolBarButtonBuilder.SetDefaultLanguage(jqGridBuildersLanguages.English);
 
 			Assert.AreEqual(jqGridBuildersLanguages.English, JQGridToolBarButtonBuilder.DefaultLanguage);
-		}
-
-		[TestMethod]
-		public void NonDefaultEdit_LanguageTooltipsUseDefaultLanguageProperty()
-		{
-			JQGridToolBarButtonBuilder.SetDefaultLanguage(jqGridBuildersLanguages.English);
-			Assert.AreEqual("Edit selected row", JQGridToolBarButtonBuilder.NonDefaultEdit().ToolTip);
-
-			JQGridToolBarButtonBuilder.SetDefaultLanguage(jqGridBuildersLanguages.Spanish);
-			Assert.AreEqual("Editar la fila seleccionada", JQGridToolBarButtonBuilder.NonDefaultEdit().ToolTip);
 		}
 	}
 }
