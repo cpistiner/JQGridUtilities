@@ -245,7 +245,7 @@ namespace JQGridUtilities.Test.jqGridBuilder
 		}
 
 		[TestMethod]
-		public void DefaultLanguageTooltipsUseDefaultLanguageProperty()
+		public void NonDefaultEdit_LanguageTooltipsUseDefaultLanguageProperty()
 		{
 			JQGridToolBarButtonBuilder.SetDefaultLanguage(jqGridBuildersLanguages.English);
 			Assert.AreEqual("Edit selected row", JQGridToolBarButtonBuilder.NonDefaultEdit().ToolTip);

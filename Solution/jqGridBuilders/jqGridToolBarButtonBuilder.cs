@@ -28,32 +28,6 @@ namespace JQGridUtilities.JQGridBuilders
 			return button;
 		}
 
-		private static string GetNonDefaultEditToolTip(jqGridBuildersLanguages language)
-		{
-			switch (language)
-			{
-				case jqGridBuildersLanguages.English:
-					return "Edit selected row";
-				case jqGridBuildersLanguages.Spanish:
-					return "Editar la fila seleccionada";
-				default:
-					return "Edit selected row";
-			}
-		}
-
-		private static string GetNonDefaultEditToolTip()
-		{
-			switch (_defaultLanguage)
-			{
-				case jqGridBuildersLanguages.English:
-					return "Edit selected row";
-				case jqGridBuildersLanguages.Spanish:
-					return "Editar la fila seleccionada";
-				default:
-					return "Edit selected row";
-			}
-		}
-
 		public static JQGridToolBarButton NonDefaultAdd(jqGridBuildersLanguages language)
 		{
 			var button = NonDefaultAdd();
@@ -177,6 +151,29 @@ namespace JQGridUtilities.JQGridBuilders
 		public static void Initialize()
 		{
 			_defaultLanguage = jqGridBuildersLanguages.English;
+		}
+
+		private static string GetNonDefaultEditToolTip(jqGridBuildersLanguages language)
+		{
+			return GetNonDefaultEditToolTipByLanguage(language);
+		}
+
+		private static string GetNonDefaultEditToolTip()
+		{
+			return GetNonDefaultEditToolTipByLanguage(_defaultLanguage);
+		}
+
+		private static string GetNonDefaultEditToolTipByLanguage(jqGridBuildersLanguages language)
+		{
+			switch (language)
+			{
+				case jqGridBuildersLanguages.English:
+					return "Edit selected row";
+				case jqGridBuildersLanguages.Spanish:
+					return "Editar la fila seleccionada";
+				default:
+					return "Edit selected row";
+			}
 		}
 	}
 }
