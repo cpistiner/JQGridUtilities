@@ -15,7 +15,7 @@ Some specifics:
 
 jqGridEditFieldAttributeBuilder
 -------------------
-**jqGridEditFieldAttributeBuilder** is a builder with *fuild interface* for edit field attributes, easy and nice coding to set this attributes.
+**jqGridEditFieldAttributeBuilder** is a builder with *fluid interface* for edit field attributes, easy and nice coding to set this attributes.
 
 an example (set width and height in edit dialogbox for a column):
 
